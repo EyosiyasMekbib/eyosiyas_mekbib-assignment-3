@@ -60,11 +60,13 @@ class _HomeState extends State<Home> {
             }
 
             if (state is HomeFailedState) {
-              return ElevatedButton(
-                  onPressed: () {
-                    BlocProvider.of<HomeBloc>(context).add(GetGroceries());
-                  },
-                  child: Icon(Icons.replay_outlined));
+              return Center(
+                child: ElevatedButton(
+                    onPressed: () {
+                      BlocProvider.of<HomeBloc>(context).add(GetGroceries());
+                    },
+                    child: Icon(Icons.replay_outlined)),
+              );
             }
             return Container();
           },

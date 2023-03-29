@@ -50,7 +50,7 @@ class _CartState extends State<Cart> {
 
                       void _incrementCounter() {
                         for (var element in state.cartItems) {
-                          this.widget.totalPrice += element.price;
+                          this.widget.totalPrice += element.getPrice();
                         }
                       }
 
@@ -81,7 +81,6 @@ class _CartState extends State<Cart> {
                             child: ListView.builder(
                               itemCount: state.cartItems.length,
                               itemBuilder: (BuildContext context, int index) {
-                                price = state.cartItems[index].price;
                                 return Padding(
                                   padding: EdgeInsets.only(top: 10),
                                   child: CartCard(

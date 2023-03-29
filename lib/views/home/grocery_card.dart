@@ -10,7 +10,7 @@ class GroceryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    num price = this.groceryItem.price;
+    num price = this.groceryItem.unit_price;
     return Container(
       padding: EdgeInsets.only(left: 0, top: 0, bottom: 12),
       decoration: BoxDecoration(

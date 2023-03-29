@@ -16,7 +16,16 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     );
 
     on<AddToCart>((event, emit) {
-      cartItems.add(event.groceryItem);
+      if (cartItems.isNotEmpty && cartItems.contains(event.groceryItem)) {
+        for (var item in cartItems) {
+          if (event.groceryItem == item) {
+            item.incrementQuantity();
+          }
+        }
+      } else {
+        cartItems.add(event.groceryItem);
+      }
+      // cartItems.add(event.groceryItem);
       emit(CartLoaded(cartItems));
       // TODO: implement event handler
     });

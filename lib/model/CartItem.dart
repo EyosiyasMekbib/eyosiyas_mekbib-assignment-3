@@ -6,9 +6,6 @@ class CartItems extends Equatable {
 
   const CartItems({this.groceryItems = const <GroceryItem>[]});
 
-  double get subtotal =>
-      groceryItems.fold(0, (total, current) => total + current.price);
-
   @override
   List<Object?> get props => [groceryItems];
 }

@@ -9,7 +9,7 @@ class CartCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    num price = this.cartItem.price;
+    num price = this.cartItem.unit_price;
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
