@@ -18,6 +18,17 @@ class AddToCart extends CartEvent {
   get data => groceryItem;
 }
 
+class RemoveFromCart extends CartEvent {
+  final GroceryItem groceryItem;
+
+  const RemoveFromCart({required this.groceryItem});
+
+  @override
+  List<Object> get props => [];
+
+  get data => groceryItem;
+}
+
 class GetCartItems extends CartEvent {
   @override
   List<Object> get props => [];

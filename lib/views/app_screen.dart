@@ -25,13 +25,14 @@ class _AppScreenState extends State<AppScreen> {
         centerTitle: true,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[
-                Color(0xffA1FF68),
-                Color.fromARGB(0, 255, 255, 255)
-              ])),
+              // gradient: LinearGradient(
+              //     begin: Alignment.topCenter,
+              //     end: Alignment.bottomCenter,
+              //     colors: <Color>[
+              //   Color(0xffA1FF68),
+              //   Color.fromARGB(0, 255, 255, 255)
+              // ])
+              ),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
