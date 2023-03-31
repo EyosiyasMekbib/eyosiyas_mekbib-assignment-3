@@ -21,8 +21,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
 
     on<GetCartItems>(
       (event, emit) async {
-        emit(CartLoading());
-
         // _service.deleteAllGroceries();
         await getCartItems();
         emit(CartLoaded(cartItems));
@@ -30,8 +28,6 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     );
 
     on<AddToCart>((event, emit) async {
-      emit(CartLoading());
-
       if (cartItems.isNotEmpty && cartItems.contains(event.groceryItem)) {
         for (var item in cartItems) {
           if (event.groceryItem == item) {
